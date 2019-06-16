@@ -2,9 +2,7 @@ const exercises = [
   { id: 1, name: 'Bicycling', completed: false, duration: 30, day: "tuesday"},
   { id: 2, name: 'Running', completed: true, duration: 45, day: "tuesday"},
   { id: 3, name: 'Swimming', completed: true, duration: 30, day: "saturday"},
-  { id: 4, name: 'Running', completed: true, duration: 20, day: "saturday"},
-  { id: 5, name: "Bicycling", completed: false, duration: 30, day: "monday"},
-  { id: 6, name: "Running", completed: false, duration: 45, day: "monday"}
+  { id: 4, name: 'Running', completed: true, duration: 20, day: "saturday"}
 ];
 
 const toggleCompleted = (exercise, icon) => {
@@ -81,13 +79,12 @@ function createExercise(exerciseObject) {
   const durationSpan = document.createElement("span");
   durationSpan.innerText = `${exerciseObject.duration} min`;
   outerDiv.appendChild(durationSpan);
-  console.log(outerDiv);
+
   return outerDiv;
 }
 
-console.dir(document.getElementById("exercise-1").firstChild);
-
 submitFormButton.addEventListener("click", function(event) {
+  debugger
   const formData = submitFormButton.form;
   const routineDay = formData[0].value;
   const exerciseDuration = formData[1].valueAsNumber;
@@ -101,6 +98,9 @@ submitFormButton.addEventListener("click", function(event) {
     const newExercise = createExercise(newWorkout);
 
     routineDiv.appendChild(newExercise);
+    const routineDescription = document.createElement("div");
+    routineDescription.innerText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fermentum est volutpat ultricies consequat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.";
+    routineDiv.appendChild(routineDescription);
   } else { //do something if the day isn't included in exercises
     //append a newExerciseNode to the DIV representing that day and show that day
   }
