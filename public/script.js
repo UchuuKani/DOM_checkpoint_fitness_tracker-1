@@ -62,6 +62,31 @@ function checkRoutineDay(newRoutine) {
   });
 }
 
+// const testCloneParent = document.getElementById("exercise-1");
+// const clone = testCloneParent.cloneNode(true);
+// console.log(clone);
+function createExercise(exerciseObject) {
+  const outerDiv = document.createElement("div");
+  outerDiv.id = `exercise-${exerciseObject.id}`;
+  outerDiv.className = "exercise-header";
+
+  const iTag = document.createElement("i");
+  iTag.className = "far fa-circle";
+  outerDiv.appendChild(iTag);
+
+  const workoutHeader = document.createElement("h3");
+  workoutHeader.innerText = exerciseObject.name;
+  outerDiv.appendChild(workoutHeader);
+
+  const durationSpan = document.createElement("span");
+  durationSpan.innerText = `${exerciseObject.duration} min`;
+  outerDiv.appendChild(durationSpan);
+  console.log(outerDiv);
+  return outerDiv;
+}
+
+console.dir(document.getElementById("exercise-1").firstChild);
+
 submitFormButton.addEventListener("click", function(event) {
   const formData = submitFormButton.form;
   const routineDay = formData[0].value;
@@ -70,12 +95,15 @@ submitFormButton.addEventListener("click", function(event) {
 
   const newWorkout = new Exercise(exerciseType, exerciseDuration, routineDay);
 
-  //this will check if the exercises array has an exercise for the new workout day - return true if yes, false if no
-  // if (checkRoutineDay(newWorkout)) { //if the day already exists
-  //   return 1; //do something
-  // } else { //do something if the day isn't included in exercises
-  //   console.log(1);
-  // }
+  // this will check if the exercises array has an exercise for the new workout day - return true if yes, false if no
+  if (checkRoutineDay(newWorkout)) { //if the day already exists
+    const routineDiv = document.getElementById(routineDay);
+    const newExercise = createExercise(newWorkout);
+
+    routineDiv.appendChild(newExercise);
+  } else { //do something if the day isn't included in exercises
+    //append a newExerciseNode to the DIV representing that day and show that day
+  }
 
   exercises.push(newWorkout);
 });
@@ -91,8 +119,6 @@ submitExerciseButton.addEventListener("click", function(event) {
   exerciseSelect.appendChild(newOption);
   exerciseValue.value = "";
 });
-
-console.dir(document.getElementById("execise-1"));
 
 //1 - Enable users to add new exercises
 //maybe try creating a dropdown menu of all possible exercises that a user can pick, and have a field to be able to add exercises to this dropdown
