@@ -51,8 +51,111 @@
           </dl>
         </div>
       </div>
+      <div id="new-workout-submission">
+        <div>
+          <label for="newtype">Add a New Exercise</label>
+          <input type="text" name="new-type" id="newtype-value">
+          <button type="button" id="exercise-submit">Add Exercise</button>
+        </div>
+        <br>
+        <form>
+          <div id="new-workout">
+            <label for="input-workout">Routine Day</label>
+            <select id="routine" name="routine">
+              <option value="sunday">Sunday</option>
+              <option value="monday">Monday</option>
+              <option value="tuesday">Tuesday</option>
+              <option value="wednesday">Wednesday</option>
+              <option value="thursday">Thursday</option>
+              <option value="friday">Friday</option>
+              <option value="saturday">Saturday</option>
+            </select>
+          </div>
+          <br>
+          <div id="new-duration">
+            <label for="workout-duration">Duration (minutes)</label>
+            <input type="number" id="workout-duration" name="workout-duration">
+          </div>
+          <br>
+          <div id="exercise-input">
+            <label for="exercise-list">Exercise Type</label>
+            <select id="type-submission">
+              <option>Bicycling</option>
+              <option>Running</option>
+              <option>Swimming</option>
+            </select>
+            <br>
+            <br>
+        </div>
+        <br>
+        <button type="button" id="submit-button">Submit Workout!</button>
+      </form>
+
+    </div>
       <div id="workouts">
-        <div class="workout">
+        <!--SUNDAY---------------------------------------------------->
+        <div class="workout" id="sunday">
+          <div class="workout-header">
+            <h2>Sunday Routine</h2>
+            <i class="fas fa-edit"></i>
+          </div>
+          <div id="exercise-0" class="exercise-header">
+            <i class="far fa-circle"></i>
+            <h3>Bicycling</h3>
+            <span>30 min</span>
+          </div>
+          <div>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+            fermentum est volutpat ultricies consequat. Class aptent taciti
+            sociosqu ad litora torquent per conubia nostra, per inceptos
+            himenaeos.
+          </div>
+          <div id="exercise-z" class="exercise-header">
+            <i class="fas fa-check-circle"></i>
+            <h3>Running</h3>
+            <span>45 min</span>
+          </div>
+          <div>
+            Does anyone read these? Praesent at ex sed diam pellentesque congue pellentesque eu felis.
+            Aliquam erat volutpat. Class aptent taciti sociosqu ad litora
+            torquent per conubia nostra, per inceptos himenaeos. Nunc vel orci
+            laoreet, commodo quam in, dignissim purus. Nunc a lacinia eros, sed
+            lobortis ipsum.
+          </div>
+        </div>
+        <!--  ------------------------------------------------------------>
+        <!--MONDAY---------------------------------------------------->
+        <div class="workout" id="monday">
+          <div class="workout-header">
+            <h2>Monday Routine</h2>
+            <i class="fas fa-edit"></i>
+          </div>
+          <div id="exercise-5" class="exercise-header">
+            <i class="far fa-circle"></i>
+            <h3>Bicycling</h3>
+            <span>30 min</span>
+          </div>
+          <div>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+            fermentum est volutpat ultricies consequat. Class aptent taciti
+            sociosqu ad litora torquent per conubia nostra, per inceptos
+            himenaeos.
+          </div>
+          <div id="exercise-6" class="exercise-header">
+            <i class="fas fa-check-circle"></i>
+            <h3>Running</h3>
+            <span>45 min</span>
+          </div>
+          <div>
+            Praesent at ex sed diam pellentesque congue pellentesque eu felis.
+            Aliquam erat volutpat. Class aptent taciti sociosqu ad litora
+            torquent per conubia nostra, per inceptos himenaeos. Nunc vel orci
+            laoreet, commodo quam in, dignissim purus. Nunc a lacinia eros, sed
+            lobortis ipsum.
+          </div>
+        </div>
+        <!--  ------------------------------------------------------------>
+        <div class="workout" id="tuesday">
           <div class="workout-header">
             <h2>Tuesday Routine</h2>
             <i class="fas fa-edit"></i>
@@ -81,7 +184,38 @@
             lobortis ipsum.
           </div>
         </div>
-        <div class="workout">
+        <!-- WEDNESDAY --------------------------------------------------->
+        <div class="workout" id="wednesday">
+          <div class="workout-header">
+            <h2>Wednesday Routine</h2>
+            <i class="fas fa-edit"></i>
+          </div>
+          <div id="exercise-0" class="exercise-header">
+            <i class="far fa-circle"></i>
+            <h3>Bicycling</h3>
+            <span>30 min</span>
+          </div>
+          <div>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+            fermentum est volutpat ultricies consequat. Class aptent taciti
+            sociosqu ad litora torquent per conubia nostra, per inceptos
+            himenaeos.
+          </div>
+          <div id="exercise-z" class="exercise-header">
+            <i class="fas fa-check-circle"></i>
+            <h3>Running</h3>
+            <span>45 min</span>
+          </div>
+          <div>
+            Praesent at ex sed diam pellentesque congue pellentesque eu felis.
+            Aliquam erat volutpat. Class aptent taciti sociosqu ad litora
+            torquent per conubia nostra, per inceptos himenaeos. Nunc vel orci
+            laoreet, commodo quam in, dignissim purus. Nunc a lacinia eros, sed
+            lobortis ipsum.
+          </div>
+        </div>
+        <!--  ------------------------------------------------------------>
+        <div class="workout" id="saturday">
           <div class="workout-header">
             <h2>Saturday Routine</h2>
             <i class="fas fa-edit"></i>

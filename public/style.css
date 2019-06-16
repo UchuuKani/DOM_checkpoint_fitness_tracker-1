@@ -54,6 +54,56 @@ h2,h3 {
   margin: 10px 0px 10px 0px;
 }
 
+/*new form styling*/
+form {
+  /*display: flex;*/
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/*#new-workout {
+  background: green;
+  height: 25%;
+}*/
+
+/*#routine {
+  background: red;
+}*/
+
+/*#workout-duration {
+  background: blue;
+}*/
+
+label {
+  background: #389683;
+  color: #04386C;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+/*#new-duration {
+  background: green;
+  height: 25%;
+}*/
+
+/*divs containing workouts for each day*/
+#sunday {
+  display: none;
+}
+
+#monday {
+  display: ;
+}
+
+#tuesday {
+  display: ;
+}
+
+#wednesday {
+  display: none;
+}
+
 #workouts {
   flex: 2;
 }
@@ -86,3 +136,4 @@ h2,h3 {
   overflow: hidden;
   box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
 }
+
